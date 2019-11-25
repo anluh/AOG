@@ -1,10 +1,13 @@
 extends ../layout/layout.pug
+
 block vars
-	- var title = 'Главная';
+	include ../includes/variables.pug
+	- var locale = ua
+
 block header
-	include ../includes/header.pug
+	include ../components/header.pug
 block content
-	include ../includes/content-main.pug
+	include ../components/content-wrapper.pug
 block footer
-	include ../includes/footer.pug     
+	include ../components/footer.pug     
               

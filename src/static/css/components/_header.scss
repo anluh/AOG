@@ -1,0 +1,16 @@
+.header {
+    background: rgba($jewel, .5);
+    min-height: 50px;
+
+    &_wrapper {
+        @include grid-container($container-max-width);
+    }
+
+    &_logo-wrapper {
+        @include grid-col(3);    
+    }
+
+    &_social {
+        @include grid-col(3);    
+    }
+}

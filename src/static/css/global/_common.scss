@@ -1,8 +1,10 @@
 @import "normalize";
 @import "variables";
 @import "fonts";
-@import "mixins/grid";
 @import "mixins/media";
+@import "mixins/grid-system";
+@import "mixins/grid";
+@import "components/header";
 
 body {
   background: $white;
@@ -10,7 +12,4 @@ body {
   font-weight: 500; 
   font-style: normal;
   font-size: 14px;
-  @include media(no-phones) {
-    @include grid-col-offset(3);
-  }
 }

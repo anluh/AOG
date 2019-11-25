@@ -80,3 +80,18 @@
     $num: $size / $columns;
     margin-#{$deraction}: if($num == 0, 0, percentage($num));
 }
+
+@mixin base-wrapper {
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+@mixin media-check($media) {
+    @if type-of($media) == list or type-of($media) == string {
+        @include respond-to($media) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}

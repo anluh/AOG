@@ -1,14 +1,11 @@
-
-/// This is a super useful mixin for media queries
 /// in $break-points map you have to define media queries for each viewport you need
-/// then in code you can use it like:
 ///	@example
-///   @include media(phones);
-///   @include media(phones-portrait tablets);
-///   @include media(tablets desktop);
-///   @include media(phones tablets);
+///   @include respond-to(phones);
+///   @include respond-to(phones-portrait tablets);
+///   @include respond-to(tablets desktop);
+///   @include respond-to(phones tablets);
 
-@mixin media($media, $operator: or) {
+@mixin respond-to($media, $operator: or) {
     $__query: null;
 
     @each $type in $media {
@@ -17,7 +14,7 @@
                 $__query: append($__query, unquote(map-get($break-points, $type)), comma);
             } @else if ($operator == and) {
                 @if ($_query == null) {
-                    $__query: '';
+                    $__query: ' ';
                 } @else {
                     $__query: str-insert($__query, ' and', str-length($__query) +1);
                 }
@@ -28,6 +25,8 @@
             @warn $type;
         }
     }
+
+    @debug $__query;
 
     @media #{$__query} {
         @content;
