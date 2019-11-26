@@ -1,0 +1,16 @@
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "components/header";
+
+body {
+  background: $white;
+  font-family: 'Formular', 'Arial', sans-serif; 
+  font-weight: 500; 
+  font-style: normal;
+  font-size: 14px;
+}
+
+.container-fluid {
+  max-width: $container-max-width;
+}
