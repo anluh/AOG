@@ -1,9 +1,6 @@
 @import "normalize";
 @import "variables";
 @import "fonts";
-@import "mixins/media";
-@import "mixins/grid-system";
-@import "mixins/grid";
 @import "components/header";
 
 body {
@@ -12,4 +9,8 @@ body {
   font-weight: 500; 
   font-style: normal;
   font-size: 14px;
+}
+
+.container-fluid {
+  max-width: $container-max-width;
 }
