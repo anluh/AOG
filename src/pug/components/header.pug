@@ -1,14 +1,18 @@
 header.header
-    .header_wrapper.container-fluid.row.middle-xs
-        .header_logo-wrapper.col-xs-12.col-md-3
-            img.header_logo(src="./img/logo-white.png", alt="Assembly of God logo")
-        nav.header_nav.nav.col-xs-12.col-md-6
-            ul.navigation
-                each obj in locale.menu
-                    li.navigation_item
-                        a(href='#'+obj.anchor).navigation_link= obj.name
-        ul.header_social.social.col-xs-12.col-md-3
-            each obj in common.socialMedia
-                li.social_item
-                    a(href=obj.link, target="_blank").social_link
-                        +icon(obj.name, `social_icon social_icon-${obj.name}`)
+    .container-fluid
+        .header_wrapper.row.middle-xs
+            .header_logo-wrapper.col-xs-12.col-md-3
+                img.header_logo(src="./img/logo-white.png", alt="Assembly of God logo")
+            nav.header_nav.nav.col-xs-12.col-md-6
+                ul.navigation
+                    each obj in locale.menu
+                        li.navigation_item
+                            a(href='#'+obj.anchor).navigation_link= obj.name
+            ul.header_social.social.col-xs-12.col-md-3
+                each obj in common.socialMedia
+                    li.social_item
+                        a(href=obj.link, target="_blank").social_link
+                            +icon(obj.name, `social_icon social_icon-${obj.name}`)
+.video
+    video.video_player(autoplay, loop, muted)
+        source(src="./img/assembly.mp4", type="video/mp4")

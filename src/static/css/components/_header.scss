@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 20;
 
     &_logo {
         max-height: 50px;
@@ -93,5 +94,15 @@
         padding: 9px;
         fill: darken($jewel, 8%);
         transition: all 0.3s;
+    }
+}
+
+.video {
+    position: relative;
+
+    &_player {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
