@@ -1,7 +1,9 @@
 @import "normalize";
 @import "variables";
 @import "fonts";
+// @import "mediaqueries";
 @import "components/header";
+@import "components/map";
 
 body {
   background: $white;
