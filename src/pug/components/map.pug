@@ -1,0 +1,12 @@
+.map#map
+    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.6417359181037!2d25.313695315167305!3d50.74513337396933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599ea22fc1981%3A0x1683bb5666cbbbfe!2z0J3QsNCx0LXRgNC10LbQvdCwINCy0YPQu9C40YbRjywgNCwg0JvRg9GG0YzQuiwg0JLQvtC70LjQvdGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1suk!2sua!4v1575052021424!5m2!1suk!2sua",frameborder="0", style="border:0;", allowfullscreen="true").map_frame
+    .map_info
+        h4.map_title=locale.addressTitle
+        .map_address
+            span.map_contact-item=locale.city
+            br
+            span.map_contact-item=locale.addressValue
+        .map_contact-info=locale.phoneTitle+': '
+            a.map_contact-item.map_contact-item--link(href="tel"+common.phoneNumber)=common.phoneNumber, locale.adminName
+        .map_contact-info=locale.emailTitle+': '
+            a.map_contact-item.map_contact-item--link(href="mailto"+common.email)=common.email

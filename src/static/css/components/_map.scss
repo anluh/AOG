@@ -1,0 +1,49 @@
+.map {
+    height: 500px;
+    position: relative;
+    &_frame {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    &_info {
+        z-index: 2;
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        width: 300px;
+        height: 220px;
+        background: rgba($jewel, .7);
+        color: #fff;
+        padding: 20px;
+        text-transform: uppercase;
+    }
+
+    &_contact-info {
+
+    }
+
+    &_address {
+        margin: 15px 0;
+    }
+
+    &_contact-item {
+        line-height: 1.5;
+        display: inline-block;
+        
+        &--link {
+            text-transform: none;
+            color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &_title {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
