@@ -1,22 +1,31 @@
 .map {
-    height: 500px;
-    position: relative;
+    @include respond-to(no-phones) {
+        height: 500px;
+        position: relative;
+    }
     &_frame {
         height: 100%;
         width: 100%;
-        position: absolute;
+        @include respond-to(no-phones) {
+            position: absolute;
+        }
     }
     &_info {
-        z-index: 2;
-        position: absolute;
-        top: 30%;
-        left: 60%;
-        width: 300px;
-        height: 220px;
-        background: rgba($jewel, .7);
         color: #fff;
         padding: 20px;
         text-transform: uppercase;
+
+        @include respond-to(no-phones) {
+            z-index: 2;
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            width: 300px;
+            height: 220px;
+            background: rgba($jewel, .7);
+    
+        }
+
     }
 
     &_contact-info {

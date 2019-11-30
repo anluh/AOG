@@ -216,7 +216,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 blockquote,
 pre,
 a,
@@ -242,7 +241,6 @@ sub,
 sup,
 tt,
 var,
-b,
 u,
 i,
 center,
@@ -310,19 +308,6 @@ section {
 ol,
 ul {
     list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-    content: '';
-    content: none;
 }
 
 table {
