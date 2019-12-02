@@ -1,0 +1,9 @@
+section.schedule
+    .container-fluid
+        h4.title=locale.scheduleTitle
+        .row.col-md-10.col-md-offset-1
+            each day in locale.scheduleArray
+                ul.schedule_list.col-md-4
+                    li.schedule_item.schedule_item--title=day.day
+                        each obj in day.schedule
+                            li.schedule_item !{obj}

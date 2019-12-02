@@ -55,48 +55,6 @@
     }
 }
 
-// TODO move this block to separate file
-
-.social {
-    display: flex;
-    align-items: center;
-
-    &_item {
-        display: inline-block;
-        margin-right: 10px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    &_link {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #fff;
-        display: block;
-        line-height: 32px;
-        transition: all 0.3s;
-
-        &:hover {
-            background: rgba($jewel, .5);
-
-            & .social_icon {
-                fill: $white;
-            }
-        }
-    }
-
-    &_icon {
-        max-width: 100%;
-        max-height: 100%;
-        padding: 9px;
-        fill: darken($jewel, 8%);
-        transition: all 0.3s;
-    }
-}
-
 .video {
     position: relative;
 

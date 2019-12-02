@@ -1,5 +1,10 @@
 .footer
-    p footer
+    p Assembly of God, Lutsk
+    ul.footer_social.social
+        each obj in common.socialMedia
+            li.social_item
+                a(href=obj.link, target="_blank").social_link
+                    +icon(obj.name, `social_icon social_icon-${obj.name}`)
 
 
 
