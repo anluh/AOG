@@ -8,11 +8,16 @@ header.header
                     each obj in locale.menu
                         li.navigation_item
                             a(href='#'+obj.anchor).navigation_link= obj.name
-            ul.header_social.social.col-xs-12.col-md-3
+            ul.header_social.social.col-xs-12.col-md-3.mobile-hide
                 each obj in common.socialMedia
                     li.social_item
                         a(href=obj.link, target="_blank").social_link
                             +icon(obj.name, `social_icon social_icon-${obj.name}`)
+            .desktop-hide.header_humburger.menu-humburger
+                - var n = 0
+                while n <= 3
+                    span.menu-humburger_line
+                        - n++
 .video
     video.video_player(autoplay, loop, muted)
         source(src="./video/assembly.mp4", type="video/mp4")

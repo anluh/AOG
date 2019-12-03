@@ -20,8 +20,21 @@ body {
 .container-fluid {
   max-width: $container-max-width;
 }
+
 .title {
   text-transform: uppercase;
   font-size: 22px;
   margin-bottom: 10px;
+}
+
+.desktop-hide {
+  @include respond-to(desktop) {
+    display: none;
+  }
+}
+
+.mobile-hide {
+  @include respond-to(mobile) {
+    display: none;
+  }
 }
