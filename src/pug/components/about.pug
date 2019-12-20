@@ -1,7 +1,8 @@
 section#about.about
+    h2.about_title.title.desktop-hide=locale.aboutChurchTitle
     img.about_image(src='./img/assemby-group-photo.jpg', alt=locale.title)
     .container-fluid
         .row
             .col-xs-12.col-md-6.col-md-offset-6
-                h2.about_title.title=locale.aboutChurchTitle
+                h2.about_title.title.mobile-hide=locale.aboutChurchTitle
                 .about_article !{locale.aboutChurchText}

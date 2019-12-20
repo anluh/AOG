@@ -7,13 +7,49 @@
     width: 100%;
     z-index: 20;
 
+    @include respond-to(mobile) {
+        height: 64px;
+    }
+
+    &_wrapper {
+        align-items: center;
+    }
+    
+    &_humburger-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     &_logo {
         max-height: 50px;
+        
+        @include respond-to(mobile) {
+            max-height: 45px;
+        }
+
     }
 
     &_social {
         display: flex;
         justify-content: flex-end;
+    }
+    
+    &_nav {
+        @include respond-to(mobile) {
+            background: rgba($jewel, .5);
+            min-height: calc(100vh - 50px);
+            position: absolute;
+            right: 0;
+            top: 64px;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateX(100%);
+
+            &--open {
+                transform: translateX(0);
+                visibility: visible;
+            }
+        }
     }
 }
 
@@ -22,6 +58,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        align-items: flex-end; 
+    }
+
 
     &_link {
         text-transform: uppercase;
@@ -50,6 +92,60 @@
             &:after {
                 opacity: 1;
                 transform: translateY(0px);
+            }
+        }
+    }
+}
+
+.menu-humburger {
+    width: 35px;
+    height: 24px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    &_line {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: $white;
+        border-radius: 5px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 9px;
+        }
+          
+        &:nth-child(4) {
+            top: 18px;
+        }
+    }
+    &--open {
+        .menu-humburger_line {
+            &:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+            &:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
             }
         }
     }

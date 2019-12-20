@@ -4,10 +4,27 @@
     line-height: 1.5em;
     position: relative;
 
+    @include respond-to(mobile) {
+        padding: 30px 0;
+    }
+
+    &_title {
+        text-align: center;
+        @include respond-to(mobile) {
+            margin-bottom: 20px;
+        }
+    }
+
     &_image {
         position: absolute;
         top: 40px;
         left: 0;
         width: calc(50% - 1rem);
+
+        @include respond-to(mobile) {
+            position: static;
+            margin-bottom: 15px;
+            width: 100%;
+        }
     }
 }
