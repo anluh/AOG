@@ -3,6 +3,7 @@
     padding-bottom: 40px;
     line-height: 1.5em;
     position: relative;
+    overflow: hidden;
 
     @include respond-to(mobile) {
         padding: 30px 0;

@@ -1,0 +1,9 @@
+section#leaders.leaders.container-fluid
+    ul.leaders_list.row
+        each leader in locale.leadersArray
+            li.leaders_item.col-xs-12.col-md-4
+                .leaders_name=leader.name
+                .leaders_text=leader.desc
+                a(href="#").leaders_link
+                    img.leaders_img(src=leader.img+'.png')
+                    img.leaders_img.leaders_img-hover(src=leader.img+'-hover.png')

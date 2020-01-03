@@ -1,0 +1,26 @@
+.leaders {
+    &_link {
+        display: block;
+        position: relative;
+        text-align: center;
+        &:hover {
+            & > .leaders_img-hover {
+                display: block;
+                height: 100%;
+            }
+        }
+    }
+    &_img {
+        max-width: 100%;
+        max-height: 500px;
+        margin: 0 auto;
+
+        &-hover {
+            position: absolute;
+            top: 0;
+            display: none;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+}
