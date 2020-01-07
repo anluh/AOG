@@ -1,8 +1,42 @@
 .leaders {
+    padding: 60px 0;
+
+    @include respond-to(mobile) {
+        padding: 30px 0;
+    }
+
+    &_item {
+        text-align: center;
+
+        @include respond-to(mobile) {
+            padding: 10px 0;
+        }
+
+
+    }
+
+    &_name {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: $jewel;
+        font-size: 20px;
+    
+        @include respond-to(mobile) {
+            font-size: 18px;
+        }
+
+    }
+
+    &_text {
+        text-transform: uppercase;
+    }
+
     &_link {
         display: block;
         position: relative;
         text-align: center;
+        margin-top: 10px;
         &:hover {
             & > .leaders_img-hover {
                 display: block;
@@ -14,6 +48,10 @@
         max-width: 100%;
         max-height: 500px;
         margin: 0 auto;
+
+        @include respond-to(mobile) {
+            max-height: 400px;
+        }
 
         &-hover {
             position: absolute;

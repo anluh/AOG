@@ -1,9 +1,13 @@
 .schedule {
-    padding: 40px 0;
+    padding: 60px 0;
     color: $white;
     background: black;
     background: url("../img/schedule-background.jpg") no-repeat;
     background-size: cover;
+
+    @include respond-to(mobile) {
+        padding: 30px 0;
+    }
 
     .title {
         text-align: center;

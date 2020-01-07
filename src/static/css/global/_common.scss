@@ -20,6 +20,11 @@ body {
 
 .container-fluid {
   max-width: $container-max-width;
+
+  @include respond-to(mobile) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .title {
