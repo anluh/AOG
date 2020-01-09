@@ -21,9 +21,9 @@ body {
 .container-fluid {
   max-width: $container-max-width;
 
-  @include respond-to(mobile) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  @include respond-to(phones) {
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
   }
 }
 

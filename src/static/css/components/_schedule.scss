@@ -16,6 +16,34 @@
     &_list {
         padding-bottom: 20px;
         padding-top: 20px;
+        
+        @include respond-to(mobile) {
+            width: 50%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @include respond-to (phones){
+            width: 100%;
+        }
+        @include respond-to (no-phones){
+            &:nth-child(1) {
+                order: 0;
+            }
+            &:nth-child(2) {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 4;
+            }
+            &:nth-child(4) {
+                order: 1;
+            }
+            &:nth-child(5) {
+                order: 3;
+            }
+        }
+
     }
 
     &_item {
