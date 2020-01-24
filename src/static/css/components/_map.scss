@@ -14,6 +14,7 @@
         color: #fff;
         padding: 20px;
         text-transform: uppercase;
+        background: rgba($jewel, .5);
 
         @include respond-to(no-phones) {
             z-index: 2;
@@ -23,9 +24,7 @@
             width: 300px;
             height: 220px;
             background: rgba($jewel, .7);
-    
         }
-
     }
 
     &_contact-info {
@@ -39,7 +38,7 @@
     &_contact-item {
         line-height: 1.5;
         display: inline-block;
-        
+
         &--link {
             text-transform: none;
             color: inherit;
