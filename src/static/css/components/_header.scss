@@ -1,5 +1,5 @@
 .header {
-    background: rgba($jewel, .5);
+    background: rgba($jewel, .9);
     min-height: 50px;
     padding: 10px 0;
     position: fixed;
@@ -61,7 +61,7 @@
 
     @include respond-to(mobile) {
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start;
     }
 
 

@@ -5,6 +5,7 @@
 @import "components/header";
 @import "components/map";
 @import "components/leaders";
+@import "components/new-building";
 @import "components/about";
 @import "components/schedule";
 @import "components/social";
@@ -12,8 +13,8 @@
 
 body {
   background: $white;
-  font-family: 'Formular', 'Arial', sans-serif; 
-  font-weight: 500; 
+  font-family: 'Formular', 'Arial', sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: 14px;
 }

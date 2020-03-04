@@ -2,8 +2,10 @@ section#leaders.leaders.container-fluid
     ul.leaders_list.row
         each leader in locale.leadersArray
             li.leaders_item.col-xs-12.col-md-4
-                .leaders_name=leader.name
-                .leaders_text=leader.desc
-                a(href="#").leaders_link
-                    img.leaders_img(src=leader.img+'.png')
-                    img.leaders_img.leaders_img-hover(src=leader.img+'-hover.png')
+                .leaders_photos
+                  img.leaders_img(src=leader.img+'.png')
+                  img.leaders_img.leaders_img-hover(src=leader.img+'-hover.png')
+                  a.leaders_link.leaders_link--husband(href=leader.husband.insta, target="_blank")
+                    span.name=leader.husband.name
+                  a.leaders_link.leaders_link--wife(href=leader.wife.insta, target="_blank")
+                    span.name=leader.wife.name

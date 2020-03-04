@@ -14,7 +14,34 @@
 
 
     }
+    &_link {
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 50%;
+      top: 0;
 
+      &--wife {
+        right: 0;
+      }
+      &--husband {
+        left: 0;
+      }
+    }
+    &_item:nth-child(3) {
+      .leaders {
+        &_link {
+          &--wife {
+            left: 0;
+            width: 44%;
+          }
+          &--husband {
+            right: 0;
+            width: 56%;
+          }
+        }
+      }
+    }
     &_name {
         text-transform: uppercase;
         font-weight: 600;
@@ -32,11 +59,11 @@
         text-transform: uppercase;
     }
 
-    &_link {
-        display: block;
+    &_photos {
         position: relative;
-        text-align: center;
         margin-top: 10px;
+        display: inline-block;
+        cursor: pointer;
         &:hover {
             & > .leaders_img-hover {
                 display: block;
@@ -44,6 +71,7 @@
             }
         }
     }
+
     &_img {
         max-width: 100%;
         max-height: 500px;
