@@ -160,6 +160,10 @@
 .video {
     position: relative;
 
+    @include respond-to(mobile) {
+        margin-top: 64px;
+    }
+
     &_player {
         object-fit: cover;
         max-width: 100%;

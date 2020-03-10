@@ -2,13 +2,13 @@ section#schedule.schedule
     .container-fluid
         h4.title=locale.scheduleTitle
         .row.col-md-10.col-md-offset-1
-            each day in locale.scheduleArrayColumn1
-                ul.schedule_list
+            ul.schedule_list
+                each day in locale.scheduleArrayColumn1
                     li.schedule_item.schedule_item--title=day.day
                         each obj in day.schedule
                             li.schedule_item !{obj}
-            each day in locale.scheduleArrayColumn2
-                ul.schedule_list
+            ul.schedule_list
+                each day in locale.scheduleArrayColumn2
                     li.schedule_item.schedule_item--title=day.day
                         each obj in day.schedule
                             li.schedule_item !{obj}
