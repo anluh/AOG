@@ -21,5 +21,6 @@ $break-points: (
     tablets-landscape: 'screen and (min-width: 1024px) and (max-width: 1439px)',
     mobile: 'screen and (max-width: 1023px)',
     desktop: 'screen and (min-width: 1024px)',
+    desktop-medium: 'screen and (min-width: 1300px)',
     desktop-large: 'screen and (min-width: 1440px)'
 );

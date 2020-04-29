@@ -6,6 +6,10 @@ section#leaders.leaders.container-fluid
                   img.leaders_img(src=leader.img+'.png')
                   img.leaders_img.leaders_img-hover(src=leader.img+'-hover.png')
                   a.leaders_link.leaders_link--husband(href=leader.husband.insta, target="_blank")
-                    span.name=leader.husband.name
+                  span.name.name--husband
+                    span.name-line=leader.husband.name
+                    span.position=leader.husband.position
                   a.leaders_link.leaders_link--wife(href=leader.wife.insta, target="_blank")
-                    span.name=leader.wife.name
+                  span.name.name--wife
+                    span.name-line=leader.wife.name
+                    span.position=leader.wife.position

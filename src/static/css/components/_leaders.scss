@@ -23,63 +23,63 @@
       text-decoration: none;
       color: $grey;
 
-      span {
-        display: block;
-        position: absolute;
-        text-align: left;
-        font-size: 16px;
+    }
+    .name {
+      display: block;
+      text-align: left;
+      font-size: 16px;
 
-        &:hover {
+      @include respond-to (desktop-medium) {
+        &--wife {
+          max-width: 95px;
+        }
+        &--husband {
+          left: -25%;
+          top: 0;
+        }
+      }
+
+
+      @include respond-to (desktop-medium) {
+        position: absolute;
+      }
+
+      .position {
+        display: block;
+        font-weight: 300;
+      }
+
+      &:hover {
+        .name-line {
           text-decoration: underline;
         }
       }
+    }
 
-      &--wife {
-        right: 0;
-
-        span {
-          max-width: 95px;
-        }
-      }
-      &--husband {
-        left: 0;
-
-        span {
-          left: -45%;
-          top: 0;
-
-          @include respond-to(mobile) {
-            left: -68%;
-          }
-        }
-      }
+    &--wife {
+      right: 0;
+    }
+    &--husband {
+      left: 0;
     }
     &_item:nth-child(1) {
-      .leaders {
-        &_link--wife {
-          span {
-            top: 30%;
-            right: -68%;
-
-            @include respond-to(mobile) {
-              right: -85%;
-            }
-          }
+      .name {
+        &--wife {
+          top: 30%;
+          right: -38%;
         }
       }
     }
 
     &_item:nth-child(2) {
-      .leaders {
-        &_link--wife {
-          span {
+      .name {
+        @media screen and (max-width: 1299px) {
+          margin-left: 10%;
+        }
+        @include respond-to (desktop-medium) {
+          &--wife {
             top: 14%;
-            right: -47%;        
-
-            @include respond-to(mobile) {
-              top: 11%;
-              right: -71%;
-            }
+            right: -30%;        
           }
         }
       }
@@ -90,31 +90,31 @@
           &--wife {
             left: 0;
             width: 44%;
-
-            span {
-              left: -35%;
-              top: 15%;
-
-              @include respond-to(mobile) {
-                left: -68%;
-              }
-            }
           }
           &--husband {
             left: auto;
             right: 0;
             width: 56%;
+          }
+        }
+      }
+      .name {
+        &--wife {
+          left: -35%;
+          top: 15%;
 
-            span {
-              left: auto;
-              right: -13%;
-              top: -25px;
+          @include respond-to(mobile) {
+            left: -68%;
+          }
+        }
+        &--husband {
+          left: auto;
+          right: -5%;
+          top: -40px;
 
-              @include respond-to(mobile) {
-                right: -31%;
-                top: -22px;
-              }
-            }
+          @include respond-to(mobile) {
+            right: -31%;
+            top: -22px;
           }
         }
       }
